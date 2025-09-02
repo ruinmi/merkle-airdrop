@@ -1,0 +1,22 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+remappings = [
+    "@openzeppelin/=lib/openzeppelin-contracts/contracts/",
+    "solady/=lib/solady/src/",
+    "@murky/=lib/murky/src/",
+]
+
+fs_permissions = [
+    { access = "read-write", path = "script/target"},
+    { access = "read-write", path = "broadcast"},
+]
+
+[lint]
+exclude_lints = [
+    "screaming-snake-case-immutable",
+    "mixed-case-function"
+]
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
